@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="EasyParallax" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,7 +15,43 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XVP-Gh-PXv" customClass="MotionView" customModule="EasyParallax" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Pd-7a-89T">
+                                        <rect key="frame" x="279" y="289" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="9Pd-7a-89T" firstAttribute="centerX" secondItem="XVP-Gh-PXv" secondAttribute="centerX" id="6l2-FF-4v6"/>
+                                    <constraint firstItem="9Pd-7a-89T" firstAttribute="top" secondItem="XVP-Gh-PXv" secondAttribute="top" constant="289" id="QnS-FA-fiA"/>
+                                    <constraint firstAttribute="centerX" secondItem="9Pd-7a-89T" secondAttribute="centerX" id="RtK-gz-jMq"/>
+                                    <constraint firstAttribute="centerY" secondItem="9Pd-7a-89T" secondAttribute="centerY" id="THR-Zu-fBW"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="QnS-FA-fiA"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="label" destination="9Pd-7a-89T" id="iTY-05-5PH"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="XVP-Gh-PXv" secondAttribute="centerY" id="5Ot-Xz-wJ8"/>
+                            <constraint firstItem="XVP-Gh-PXv" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="81u-dq-vc5"/>
+                            <constraint firstItem="XVP-Gh-PXv" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Ksh-d0-fzw"/>
+                            <constraint firstAttribute="centerX" secondItem="XVP-Gh-PXv" secondAttribute="centerX" id="PU9-eg-JWj"/>
+                            <constraint firstItem="XVP-Gh-PXv" firstAttribute="leading" secondItem="2fi-mo-0CV" secondAttribute="leading" id="lXn-qJ-Fte"/>
+                            <constraint firstItem="XVP-Gh-PXv" firstAttribute="trailing" secondItem="2fi-mo-0CV" secondAttribute="trailing" id="yON-ng-wwg"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
